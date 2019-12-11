@@ -4,7 +4,7 @@
   <button ng-click="order = 'belt'">Order by Belt</button>
   <input type="text" ng-model="search" placeholder="Search for a ninja" />
   <!-- <p>{{message}}</p> -->
-  <ul>
+  <ul id="ninja-list">
     <li ng-repeat="ninja in ninjas | orderBy: order | filter: search" ng-show="ninja.available">
       <!-- ng source is used because otherwise the page loads and looks for an image before angular has supplied it. -->
       <img ng-src="{{ninja.thumb}}" style="margin: -12px 10px 0 0; float: left; width: 50px" ng-show="ninja.thumb" />
